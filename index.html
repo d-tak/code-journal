@@ -20,6 +20,54 @@
   </header>
   <main>
   </main>
+  <div class="container">
+    <form id="journal-inputs">
+      <div data-view="entry-form">
+        <div class="row">
+          <div class="col">
+            <h1>New Entry</h1>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col col-half">
+            <img class="image" src="images/placeholder-image-square.jpg" alt="placeholder">
+          </div>
+          <div class="col col-half">
+            <div class="title">
+              <label for="title">Title</label>
+            </div>
+            <div>
+              <input type="text" name="title" id="title" required/>
+            </div>
+            <div class="url">
+              <label for="url">Photo URL</label>
+            </div>
+            <div>
+              <input type="text" name="title" id="url" required />
+            </div>
+          </div>
+        </div>
+
+        <div class="row">
+          <div class="col">
+            <div class="notes">
+              <label for="notes">Notes</label>
+            </div>
+            <div>
+              <input type="text" name="title" id="notes" required />
+            </div>
+          </div>
+          <div class="row">
+            <div class="col align-right">
+              <button class="save">SAVE</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </form>
+  </div>
+
+
   <script src="js/data.js"></script>
   <script src="js/main.js"></script>
 </body>
