@@ -4,72 +4,95 @@
 
 body {
   margin: 0;
-  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  font-family: sans-serif;
+}
+
+.header {
+  background-color: #562b81;
+  color: white;
+  padding: 0.5rem;
+}
+
+h2 {
+  font-family: "Proza Libre", sans-serif;
+  font-weight: 600;
+  font-size: 30px;
+}
+
+h1 {
+  font-family: "Proza Libre", sans-serif;
+  font-weight: 600;
+  font-size: 30px;
 }
 
 .container {
-  max-width: 1920px;
-  margin: 0 auto;
-  padding: 0 1rem;
   background-color: #e9e7e9;
-  justify-content: center;
 }
 
-.row {
-  display: flex;
-  flex-wrap: wrap;
-}
-
-.image {
-  width: 80%;
-}
-
-.col,
-.col-half {
-  padding: 0 0.5rem;
+.column-half > img {
   width: 100%;
 }
 
-#title,
-#url {
-  border-color: rgba(211, 211, 211, 0.7);
-  border-width: 0.5px;
-  border-radius: 0.3rem;
-  width: 30rem;
-  height: 2rem;
-}
-
-#notes {
-  border-color: #c8c6c8;
-  border-width: 0.5px;
-  border-radius: 0.3rem;
-  width: 30rem;
-  height: 10rem;
-}
-
 .title,
-.url,
-.notes {
-  padding-top: 2rem;
-  padding-bottom: 0.5rem;
+.notes,
+.photo-url {
+  font-family: "Proza Libre", sans-serif;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 16px;
+  color: #292929;
 }
 
-.save {
-  border-color: none;
-  border-width: 0;
-  background-color: #402265;
+#title,
+#notes,
+#photo-url {
+  border-radius: 4px;
+  border-width: 1.5px;
+  border-color: #e9e7e9;
+}
+
+input:focus {
+  border-color: #562b81;
+}
+
+.column-half input {
+  width: 100%;
+  line-height: 25px;
+}
+
+.notes-field {
+  height: 149px;
+}
+
+.photo-url,
+.notes-section {
+  padding-top: 15px;
+}
+
+label {
+  line-height: 25px;
+}
+
+.button {
+  background-color: #562b81;
   color: white;
-  border-radius: 0.3rem;
-  width: 5rem;
-  height: 2rem;
+  padding: 5px 14px;
+  border-radius: 5px;
+  border-width: 1px;
+  margin-top: 12px;
+  margin-bottom: 12px;
+  font-family: "Open Sans", sans-serif;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 22px;
 }
 
 .align-right {
+  margin-top: 1rem;
   text-align: right;
 }
 
-@media only screen and (min-width: 576px) {
-  .col-half {
-    width: 50%;
-  }
+.border-color {
+  border-color: #562b81;
 }
