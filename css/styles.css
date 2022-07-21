@@ -1,22 +1,19 @@
-* {
-  box-sizing: border-box;
-}
-
 body {
   margin: 0;
   font-family: sans-serif;
+  background-color: #e9e7e9;
 }
 
 .header {
   background-color: #562b81;
   color: white;
-  padding: 0.5rem;
 }
 
 h2 {
   font-family: "Proza Libre", sans-serif;
-  font-weight: 600;
-  font-size: 30px;
+  font-weight: 400;
+  font-size: 20px;
+  padding: 0.75rem;
 }
 
 h1 {
@@ -26,7 +23,8 @@ h1 {
 }
 
 .container {
-  background-color: #e9e7e9;
+  padding-left: 1rem;
+  padding-right: 1rem;
 }
 
 .column-half > img {
@@ -34,8 +32,8 @@ h1 {
 }
 
 .title,
-.notes,
-.photo-url {
+.photo-url,
+.notes {
   font-family: "Proza Libre", sans-serif;
   font-style: normal;
   font-weight: 600;
@@ -44,16 +42,17 @@ h1 {
 }
 
 #title,
-#notes,
 #photo-url {
+  height: 40px;
   border-radius: 4px;
-  border-width: 1.5px;
-  border-color: #e9e7e9;
+  border-width: 1px;
+  border-color: #b6b6b6;
+  font-family: "open sans", sans-serif;
 }
 
-input:focus {
+/* input:focus {
   border-color: #562b81;
-}
+} */
 
 .column-half input {
   width: 100%;
@@ -62,11 +61,15 @@ input:focus {
 
 .notes-field {
   height: 149px;
+  border-radius: 4px;
+  border-color: #b6b6b6;
+  font-family: "open sans", sans-serif;
 }
 
 .photo-url,
-.notes-section {
-  padding-top: 15px;
+.notes-field {
+  padding-top: 18px;
+  padding-bottom: 18px;
 }
 
 label {
@@ -76,23 +79,17 @@ label {
 .button {
   background-color: #562b81;
   color: white;
+  width: 72px;
+  height: 32px;
   padding: 5px 14px;
-  border-radius: 5px;
+  border-radius: 4px;
   border-width: 1px;
-  margin-top: 12px;
-  margin-bottom: 12px;
   font-family: "Open Sans", sans-serif;
-  font-style: normal;
   font-weight: 600;
   font-size: 16px;
-  line-height: 22px;
 }
 
 .align-right {
   margin-top: 1rem;
   text-align: right;
-}
-
-.border-color {
-  border-color: #562b81;
 }
