@@ -53,6 +53,12 @@ function renderJournal(entry) {
   var notesText = document.createElement('p');
   notesText.textContent = entry.notes;
 
+  var editPen = document.createElement('i');
+  editPen.className = 'fa-regular fa-pen-to-square';
+
+  // Ensure that each rendered entry is given a data-entry-id attribute indicating which entry it is.
+  list.setAttribute('data-entry-id', list.entryId);
+
   ul.appendChild(list);
   list.appendChild(row);
   row.appendChild(columnHalf);
@@ -60,6 +66,7 @@ function renderJournal(entry) {
   row.appendChild(columnHalf2);
   columnHalf2.appendChild(title);
   columnHalf2.appendChild(notesText);
+  title.appendChild(editPen);
 
   return list;
 
