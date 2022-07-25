@@ -21,19 +21,18 @@
   <link rel="stylesheet" href="css/styles.css">
 </head>
 <body>
-  <main>
-    <div class="container header">
-      <div class="row">
-        <div class="column-full">
-          <h2 class="inline"> Code Journal </h2>
-          <nav class="inline"><a href="#">Entries</a></nav>
-        </div>
+  <div class="container header">
+    <div class="row">
+      <div class="column-full">
+        <h2 class="tabs"> Code Journal </h2>
+        <nav class="tabs"><a href="#" data-link="entries">Entries</a></nav>
       </div>
     </div>
-
+  </div>
+  <main>
     <div class="container">
       <form id="form-input">
-        <div data-view="entry-form">
+        <div data-view="new-entry" class="viewentry">
           <div class="row">
             <div class="column-full">
               <h1>New Entry</h1>
@@ -46,11 +45,11 @@
             <div class="column-half">
               <div class="title">
                 <label for="title">Title</label>
-                <input name="title" type="text" id="title" placeholder="" required>
+                <input name="title" type="text" id="title" required>
               </div>
               <div class="photo-url">
                 <label for="photo-url">Photo URL</label>
-                <input name="photoUrl" type="url" id="photo-url" placeholder="" required>
+                <input name="photoUrl" type="url" id="photo-url" required>
               </div>
             </div>
           </div>
@@ -71,10 +70,15 @@
         </div>
 
 
-        <div data-view="entries">
+        <div data-view="entries" class="viewentry hidden">
           <div class="row">
-            <div class="column-full">
+            <div class="column-full space-between">
               <h1>Entries</h1>
+              <label for="new"></label>
+              <button class="new-button" type="button" data-link="new-entry">NEW</button>
+            </div>
+            <div class="column-full center viewentry hidden">
+              <p> No entries have been recorded </p>
             </div>
           </div>
           <ul>

@@ -23,6 +23,10 @@ function handleSubmit(event) {
   journalEntry.reset();
   image.setAttribute('src', 'images/placeholder-image-square.jpg');
   data.entries.unshift(completedForm);
+  var newEntry = renderJournal(completedForm);
+  ul.prepend(newEntry);
+  viewSwap('entries');
+
 }
 
 journalEntry.addEventListener('submit', handleSubmit);
@@ -69,4 +73,28 @@ function handleEventDom(event) {
     ul.append(newEntry);
   }
 }
+
 window.addEventListener('DOMContentLoaded', handleEventDom);
+
+var button = document.querySelectorAll('[data-link]');
+var tabs = document.querySelectorAll('[data-view]');
+
+function currentWindow(event) {
+  var viewEntry = event.target.getAttribute('data-link');
+  viewSwap(viewEntry);
+}
+
+function viewSwap(viewEntry) {
+  for (var k = 0; k < tabs.length; k++) {
+    if (tabs[k].getAttribute('data-view') === viewEntry) {
+      tabs[k].className = 'viewentry';
+    } else {
+      (tabs[k].className = 'viewentry hidden');
+
+    }
+  }
+}
+
+for (var i = 0; i < button.length; i++) {
+  button[i].addEventListener('click', currentWindow);
+}
