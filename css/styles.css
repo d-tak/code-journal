@@ -9,10 +9,6 @@ body {
   color: white;
 }
 
-.row {
-  display: flex;
-}
-
 .tabs {
   display: inline-block;
 }
