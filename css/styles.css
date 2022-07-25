@@ -9,11 +9,29 @@ body {
   color: white;
 }
 
+.tabs {
+  display: inline-block;
+}
+
 h2 {
   font-family: "Proza Libre", sans-serif;
   font-weight: 400;
   font-size: 20px;
   padding: 0.75rem;
+}
+
+a:link {
+  font-family: "open sans", sans-serif;
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 22px;
+  color: white;
+  text-decoration: none;
+  margin-left: 60px;
+}
+
+a:visited {
+  color: white;
 }
 
 h1 {
@@ -27,8 +45,23 @@ h1 {
   padding-right: 1rem;
 }
 
+img {
+  object-fit: contain;
+  width: 100%;
+  max-height: 300px;
+}
+
 .column-half > img {
   width: 100%;
+}
+
+.space-between {
+  display: flex;
+  justify-content: space-between;
+}
+
+.center {
+  text-align: center;
 }
 
 .title,
@@ -85,7 +118,44 @@ label {
   font-size: 16px;
 }
 
+.new-button {
+  background-color: #562b81;
+  color: white;
+  width: 72px;
+  height: 32px;
+  margin-top: 1.5rem;
+  padding: 5px 14px;
+  border-radius: 4px;
+  border-width: 1px;
+  font-family: "Open Sans", sans-serif;
+  font-weight: 600;
+  font-size: 16px;
+}
+
 .align-right {
   margin-top: 1rem;
   text-align: right;
+}
+
+ul {
+  list-style: none;
+  font-family: "open sans", sans-serif;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 26px;
+  color: black;
+  padding-left: 0;
+}
+
+li {
+  margin-bottom: 1.5rem;
+}
+
+h3 {
+  font-family: "Proza Libre", sans-serif;
+  font-weight: 600;
+  font-size: 24px;
+  line-height: 33px;
+  color: #292929;
+}
 }
