@@ -143,3 +143,31 @@ function editButton(event) {
 }
 
 ul.addEventListener('click', editButton);
+
+var $modal = document.querySelector('.modal');
+var $delete = document.querySelector('.delete');
+var $cancel = document.querySelector('#cancel');
+var $confirm = document.querySelector('#confirm');
+
+function openModal(event) {
+  $modal.className = 'modal';
+}
+function closeModal(event) {
+  $modal.className = 'modal hidden';
+}
+
+function aDelete(event) {
+  for (var i = 0; i < data.entries.length; i++) {
+    if (data.entries[i].entryId === data.editing.entryId) {
+      data.entries.splice(i, 1);
+      ul.children[i].remove();
+      viewSwap('entries');
+      closeModal();
+    }
+  }
+}
+
+$delete.addEventListener('click', openModal);
+$cancel.addEventListener('click', closeModal);
+$confirm.addEventListener('click', aDelete);
+
