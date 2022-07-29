@@ -143,6 +143,7 @@ function editButton(event) {
 }
 
 ul.addEventListener('click', editButton);
+
 var $modal = document.querySelector('.modal');
 var $delete = document.querySelector('.delete');
 var $cancel = document.querySelector('#cancel');
@@ -169,3 +170,4 @@ function aDelete(event) {
 $delete.addEventListener('click', openModal);
 $cancel.addEventListener('click', closeModal);
 $confirm.addEventListener('click', aDelete);
+
